@@ -14,7 +14,7 @@ function Navbar() {
           <li><a href="#hero" className="hover:text-[#A259FF]">Home</a></li>
           <li><a href="#projects" className="hover:text-[#A259FF]">Projects</a></li>
           <li><a href="#about" className="hover:text-[#A259FF]">About</a></li>
-          <li><a href="#contact" className="hover:text-[#A259FF]">Contact</a></li>
+          {/* <li><a href="#contact" className="hover:text-[#A259FF]">Contact</a></li> */}
         </ul>
         {/* <motion.button
           onClick={toggleTheme}

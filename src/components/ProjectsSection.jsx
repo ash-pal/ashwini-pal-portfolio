@@ -16,8 +16,8 @@ const projects = [
     live: "https://your-live-site.com",
   },
   {
-    title: "Bookstagram - the.twirling.pages",
-    tech: "Instagram aesthetic + book reviews + music integration",
+    title: "Space AI",
+    tech: "LLM, OpenAI",
     github: "https://www.instagram.com/the.twirling.pages/",
     live: "https://www.instagram.com/the.twirling.pages/",
   },
@@ -34,7 +34,8 @@ function ProjectsSection() {
       viewport={{ once: true }}
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-[#B79CED] mb-10">Projects</h2>
+        {/* <h2 className="text-4xl font-bold text-[#B79CED] mb-10">Projects</h2> */}
+        <h2 className="text-3xl font-bold text-[#B79CED] mb-6">/ pet projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard

@@ -12,7 +12,7 @@ body,
 
 @layer utilities {
   .animate-spin-slow {
-    animation: spin 20s linear infinite;
+    animation: spin 500s linear infinite;
   }
 
   .animate-float {
@@ -67,5 +67,23 @@ body,
       transform: translateX(120vw) rotate(15deg);
       opacity: 0;
     }
+  }
+
+  .float-slow {
+    animation: floatUpDown 6s ease-in-out infinite;
+  }
+
+  @keyframes floatUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .float-soft {
+    animation: floatSoft 4s ease-in-out infinite;
+  }
+
+  @keyframes floatSoft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
   }
 }
