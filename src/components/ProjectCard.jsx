@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaRocket, FaGlobe, FaGithub } from "react-icons/fa";
 
-const ProjectCard = ({ title, description, github, live }) => (
+const ProjectCard = ({ title, description, tech, github, live }) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -14,7 +14,10 @@ const ProjectCard = ({ title, description, github, live }) => (
       <FaRocket />
       <h3 className="text-xl font-semibold">{title}</h3>
     </div>
-    <p className="text-gray-400 mb-4">{description}</p>
+    <p className="text-sm text-gray-300 mb-1 text-left">{description}</p>
+    <br />
+    <p className="text-xs text-gray-400 italic mb-4 text-left">{tech}</p>
+      
     <div className="flex gap-4 mt-4 text-sm">
       <a href={github} target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline flex items-center gap-1">
         <FaGithub /> Code

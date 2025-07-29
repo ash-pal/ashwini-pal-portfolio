@@ -6,16 +6,20 @@ import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import { useThemeStore } from "./store/themeStore";
+import HoverMeteor from "./components/HoverMeteor";
+import Experience from "./components/Experience";
 
 function App() {
   const { isSpace } = useThemeStore();
   return (
     <div className={`${isSpace ? 'bg-[#0D1117] text-white' : 'bg-[#f5f5f5] text-[#111]'}`}>
+      <HoverMeteor />
       <Navbar />
       <main className="flex-grow z-10">
         <Hero />
-        <ProjectsSection />
         <AboutSection />
+        <Experience />
+        <ProjectsSection />
         <Footer />
       </main>
     </div>

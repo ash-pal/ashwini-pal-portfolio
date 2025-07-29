@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Particles from "react-tsparticles";
 // import { loadFull } from "tsparticles-engine";
 import { loadStarsPreset } from "tsparticles-preset-stars";
+import { Mail } from "lucide-react";
 
 function Hero() {
   const particlesInit = async (engine) => {
@@ -60,13 +61,25 @@ function Hero() {
       </motion.h2>
 
         <motion.p
-          className="text-gray-300 text-lg md:text-xl max-w-xl mx-auto"
+          className="text-gray-300 text-lg md:text-xl max-w-xl mx-auto mb-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
           I'm Ashwini, a full-stack software engineer navigating the galaxies of web and AI development.
         </motion.p>
+       
+        <div className="flex justify-center mt-4">
+        <motion.a
+          href="mailto:palashwini2@gmail.com"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-flex items-center justify-center gap-2 px-5 py-3 border-2 border-violet-400 text-violet-300 rounded-md font-medium transition-all duration-300 hover:bg-violet-400 hover:text-[#0D1117] shadow-[0_0_10px_#c084fc]"
+        >
+          <Mail className="w-4 h-4 group-hover:stroke-[#0D1117]" />
+          Say hi!
+        </motion.a>
+        </div>
       </div>
 
       
