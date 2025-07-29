@@ -23,25 +23,6 @@ function Hero() {
         }}
       />
 
-      <div className="z-10 max-w-3xl">
-        <motion.h2
-          className="text-5xl md:text-6xl font-extrabold text-[#B79CED] mb-4"
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-        >
-          Exploring the Digital Cosmos 🚀
-        </motion.h2>
-        <motion.p
-          className="text-gray-300 text-lg md:text-xl max-w-xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          I'm Ashwini, a full-stack software engineer navigating the galaxies of web and AI development.
-        </motion.p>
-      </div>
-
       {/* Orbiting Planet Animation */}
       <div className="absolute bottom-10 right-10 w-40 h-40 z-0 hidden md:block">
         <div className="relative w-full h-full animate-spin-slow">
@@ -65,6 +46,30 @@ function Hero() {
           </svg>
         </div>
       </div>
+
+      <div className="z-10 max-w-3xl">
+      <motion.h2
+        className="text-5xl md:text-6xl font-extrabold mb-4"
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+      >
+        <span className="text-gray-300">hi, </span>
+        <span className="text-[#B79CED]">ashwini</span>
+        <span className="text-gray-300"> here.</span>
+      </motion.h2>
+
+        <motion.p
+          className="text-gray-300 text-lg md:text-xl max-w-xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          I'm Ashwini, a full-stack software engineer navigating the galaxies of web and AI development.
+        </motion.p>
+      </div>
+
+      
     </section>
   );
 }
