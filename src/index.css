@@ -2,14 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
-    height: 100%;
-    scroll-behavior: smooth;
-    background-color: #0D1117;
+html,
+body,
+#root {
+  height: 100%;
+  scroll-behavior: smooth;
+  background-color: #0D1117;
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
   }
 
-  @layer utilities {
-    .animate-spin-slow {
-      animation: spin 20s linear infinite;
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
     }
   }
+
+  .shooting-star {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, white, transparent);
+    animation: shoot 5s linear infinite;
+  }
+
+  .shooting-star.one {
+    top: 20%;
+    left: -100px;
+    animation-delay: 0s;
+  }
+
+  .shooting-star.two {
+    top: 50%;
+    left: -150px;
+    animation-delay: 1s;
+  }
+
+  .shooting-star.three {
+    top: 75%;
+    left: -200px;
+    animation-delay: 2s;
+  }
+
+  @keyframes shoot {
+    0% {
+      transform: translateX(0) rotate(15deg);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(120vw) rotate(15deg);
+      opacity: 0;
+    }
+  }
+}
