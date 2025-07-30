@@ -3,20 +3,24 @@ import { motion } from "framer-motion";
 
 const experiences = {
   amdocs: {
-    role: "Frontend Developer Intern @ Amdocs",
-    date: "May 2024 - July 2024",
+    role: "🏢 Amdocs – Software Developer",
+    date: "August 2021 - Present",
     points: [
-      "Led development of end-to-end region build automation across Route 53 (AWS's DNS web service). This enabled the launch of customer-facing global services in new regions within a day, a significant reduction from the previous time-frame of a month.",
-      "Integrated REST APIs and optimized performance using React hooks.",
+      "Developed and maintained scalable microservices with Spring Boot, improving system reliability and reducing response time by 30%.",
+      "Built interactive UI components using React and Angular, enhancing the user experience for enterprise platforms.",
+      "Automated CI/CD pipelines using Jenkins and Kubernetes, streamlining deployment cycles and reducing manual intervention.",   
+      "Migrated large-scale data workflows from Oracle to MySQL, increasing efficiency by 40%.",
+      "Integrated GenAI-powered SQL query generation and multilingual language extensions, boosting developer productivity.",
+      "Collaborated with cross-functional teams on production-critical features with 100M+ user impact.",
+      "Recognized for contributing to AI innovation initiatives within the organization."
     ],
   },
-  college: {
-    role: "Tech Lead @ College Tech Club",
-    date: "Aug 2023 - Present",
+  tsf: {
+    role: "The Sparks Foundation - Web Development Intern",
+    date: "August 2020 - September 2020",
     points: [
-      "Led 10+ students in open source and web development projects.",
-      "Organized hands-on workshops on Git, React, and modern tooling.",
-      "Led development of end-to-end region build automation across Route 53 (AWS's DNS web service). This enabled the launch of customer-facing global services in new regions within a day, a significant reduction from the previous time-frame of a month."
+      "Worked on designing and developing a Credit Management Dynamic Website that lets you transfer credit between users.",
+      "Integrated robust and secure methodologies",
     ],
   },
 };
@@ -93,7 +97,7 @@ export default function Experience() {
                     : "text-gray-400 hover:text-purple-300"
                 }`}
               >
-                {key === "amdocs" ? "AMDOCS" : "COLLEGE"}
+                {key === "amdocs" ? "Amdocs" : "The Sparks Foundation"}
               </button>
             ))}
           </div>

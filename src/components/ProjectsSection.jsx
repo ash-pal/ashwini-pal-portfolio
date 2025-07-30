@@ -6,23 +6,26 @@ const projects = [
   {
     title: "Stock Trading Platform",
     tech: "React, Spring Boot, MySQL, Tailwind",
-    description: "A Platform that gives you live updates on the latest stock prices whilst providing an option to get alerts too.",
+    description: "A full-stack trading dashboard enabling real-time stock monitoring, portfolio management, and transaction simulations.",
     github: "https://github.com/ashwini-pal/stock-trading-platform",
     live: "https://your-live-site.com",
+    disabled: false
   },
   {
     title: "AI Expense Tracker",
     tech: "Angular, Spring Boot, PostgreSQL, OpenAI",
-    description: "A Platform that gives you live updates on the latest stock prices whilst providing an option to get alerts too.",
+    description: "An intelligent tracker that categorizes expenses, offers financial insights, and generates recommendations using LLM-based analysis.",
     github: "https://github.com/ashwini-pal/ai-expense-tracker",
     live: "https://your-live-site.com",
+    disabled: true
   },
   {
     title: "Space AI",
-    tech: "LLM, OpenAI",
-    description: "A Platform that gives you live updates on the latest stock prices whilst providing an option to get alerts too.",
+    tech: "LLM, React, Neo4j, FastAPI, OpenAI",
+    description: "A conceptual proof-of-concept inspired by ESA’s data intelligence systems—leveraging LLMs and knowledge graphs for smart information retrieval and contextual querying in space missions.",
     github: "https://www.instagram.com/the.twirling.pages/",
     live: "https://www.instagram.com/the.twirling.pages/",
+    disabled: true
   },
 ];
 
@@ -96,6 +99,7 @@ function ProjectsSection() {
               tech={project.tech}
               github={project.github}
               live={project.live}
+              disabled={project.disabled}
             />
           ))}
         </div>

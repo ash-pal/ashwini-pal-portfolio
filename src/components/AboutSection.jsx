@@ -101,34 +101,24 @@ const AboutSection = () => {
           </motion.h2>
 
           <motion.p
-            className="text-gray-300 leading-relaxed text-lg mb-6"
+            className="text-gray-300 leading-relaxed text-lg mb-6 text-justify"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            I’m Ashwini, a <strong>Software Developer at Amdocs</strong> with experience building scalable enterprise applications using <strong>Spring Boot</strong>, <strong>Java</strong>, and modern frontend frameworks like <strong>React</strong> and <strong>Angular</strong>. I enjoy crafting clean, efficient systems and recently started exploring <strong>Generative AI</strong> and its applications in finance.
-            <br /><br />
-            Outside of code, I love books, space themes, mountains, and creating aesthetic digital experiences.
+            
+            Experienced full-stack developer passionate about building scalable, high-impact products with clean architecture and thoughtful design. I’ve contributed to enterprise systems, optimized deployment pipelines, and led AI-driven innovations to boost efficiency and functionality. Active in open-source, competitions, and GenAI initiatives, I bring a product-first mindset and a sharp focus on delivering real-world impact.
+            <br /> <br />
+            Here are some technologies I have been working with:
+            <br />
           </motion.p>
-
-          {/* View Resume Button */}
-          <motion.a
-            href="/Ashwini_Pal_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-2 bg-[#B79CED] text-black rounded-full font-semibold shadow-lg hover:shadow-purple-500/40 hover:bg-white transition mb-6"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View Resume
-          </motion.a>
 
           {/* Tech Stack Pills + Orbit Hover Bars */}
           <div className="flex flex-wrap gap-4 mt-4">
             {techSkills.map((tech, idx) => (
               <div key={idx} className="group relative">
-                <span className="bg-[#1E1E2F] text-gray-300 px-4 py-1 rounded-full text-sm hover:bg-[#B79CED]/90 hover:text-black transition cursor-default">
+                <span className="bg-[#1E1E2F] text-gray-300 px-7 py-1 rounded-full text-sm hover:bg-[#B79CED]/90 hover:text-black transition cursor-default">
                   {tech.name}
                 </span>
                 {/* Starfield bar on hover */}
@@ -148,6 +138,28 @@ const AboutSection = () => {
               </div>
             ))}
           </div>
+            <br />
+          <motion.p
+            className="text-gray-300 leading-relaxed text-lg mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Outside of code, I love books, space themes, mountains, and creating aesthetic digital experiences.
+          </motion.p>
+
+          {/* View Resume Button */}
+          <motion.a
+            href="/Ashwini_Pal_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-2 bg-[#B79CED] text-black rounded-full font-semibold shadow-lg hover:shadow-purple-500/40 hover:bg-white transition mb-6"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            View Resume
+          </motion.a>
         </div>
 
         {/* Right: Profile Image */}
