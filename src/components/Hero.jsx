@@ -24,29 +24,158 @@ function Hero() {
         }}
       />
 
-      {/* Orbiting Planet Animation */}
-      <div className="absolute bottom-10 right-10 w-40 h-40 z-0 hidden md:block">
-        <div className="relative w-full h-full animate-spin-slow">
-          <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
-            <circle
-              cx="50"
-              cy="50"
-              r="40"
-              fill="none"
-              stroke="#A259FF"
-              strokeWidth="1"
-              strokeDasharray="4 4"
-            />
-            <circle
-              cx="50"
-              cy="10"
-              r="5"
-              fill="#B79CED"
-              className="animate-pulse"
-            />
-          </svg>
+      {/* Orbiting Planet Animation - Medium+ version */}
+      <div className="absolute top-24 right-60 transform -translate-x-1/2 w-64 h-64 z-0 hidden md:block pointer-events-none opacity-80">
+        <div className="relative w-full h-full">
+
+          {/* Glowing Sun */}
+          <div className="absolute top-1/2 left-1/2 w-6 h-6 rounded-full bg-yellow-300 shadow-[0_0_20px_6px_rgba(255,215,0,0.7)] transform -translate-x-1/2 -translate-y-1/2 z-10" />
+
+          {/* Orbits */}
+          {[30, 45, 60, 75].map((r, i) => (
+            <svg key={i} viewBox="0 0 200 200" className="absolute inset-0 w-full h-full">
+              <circle
+                cx="100"
+                cy="100"
+                r={r}
+                fill="none"
+                stroke="#A259FF"
+                strokeWidth="1"
+                strokeDasharray="2 4"
+                strokeOpacity="0.2"
+              />
+            </svg>
+          ))}
+
+          {/* Animated Planets on Each Orbit */}
+          {[30, 45, 60, 75].map((distance, index) => (
+            <motion.div
+              key={index}
+              className="absolute top-1/2 left-1/2"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 10 + index * 3, ease: "linear" }}
+              style={{ transformOrigin: "center" }}
+            >
+              <div
+                className="relative"
+                style={{
+                  transform: `translate(-50%, -${distance}px)`
+                }}
+              >
+                <div
+                  className={`w-3.5 h-3.5 rounded-full ${
+                    index % 2 === 0 ? "bg-[#B79CED]" : "bg-[#D1B3FF]"
+                  } drop-shadow-[0_0_8px_rgba(183,156,237,0.4)] opacity-80`}
+                />
+              </div>
+            </motion.div>
+          ))}
+
         </div>
       </div>
+
+      <div className="absolute top-114 left-80 transform -translate-x-1/2 w-64 h-64 z-0 hidden md:block pointer-events-none opacity-80">
+        <div className="relative w-full h-full">
+
+          {/* Glowing Sun */}
+          <div className="absolute top-1/2 left-1/2 w-5 h-5 rounded-full bg-yellow-300 shadow-[0_0_20px_6px_rgba(255,215,0,0.7)] transform -translate-x-1/2 -translate-y-1/2 z-10" />
+
+          {/* Orbits */}
+          {[30, 45].map((r, i) => (
+            <svg key={i} viewBox="0 0 200 200" className="absolute inset-0 w-full h-full">
+              <circle
+                cx="100"
+                cy="100"
+                r={r}
+                fill="none"
+                stroke="#A259FF"
+                strokeWidth="1"
+                strokeDasharray="2 4"
+                strokeOpacity="0.2"
+              />
+            </svg>
+          ))}
+
+          {/* Animated Planets on Each Orbit */}
+          {[30, 45].map((distance, index) => (
+            <motion.div
+              key={index}
+              className="absolute top-1/2 left-1/2"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 10 + index * 3, ease: "linear" }}
+              style={{ transformOrigin: "center" }}
+            >
+              <div
+                className="relative"
+                style={{
+                  transform: `translate(-50%, -${distance}px)`
+                }}
+              >
+                <div
+                  className={`w-3 h-3 rounded-full ${
+                    index % 2 === 0 ? "bg-[#B79CED]" : "bg-[#D1B3FF]"
+                  } drop-shadow-[0_0_8px_rgba(183,156,237,0.4)] opacity-80`}
+                />
+              </div>
+            </motion.div>
+          ))}
+
+        </div>
+      </div>
+
+
+      {/*  */}
+
+      {/* Orbiting Planet Animation - Mobile Version */}
+      <div className="block md:hidden absolute top-24 left-1/2 transform -translate-x-1/2 w-40 h-40 z-0 pointer-events-none opacity-80">
+        <div className="relative w-full h-full">
+
+          {/* Glowing Sun */}
+          <div className="absolute top-1/2 left-1/2 w-4 h-4 rounded-full bg-yellow-300 shadow-[0_0_15px_4px_rgba(255,215,0,0.6)] transform -translate-x-1/2 -translate-y-1/2 z-10" />
+
+          {/* Orbits */}
+          {[20, 30].map((r, i) => (
+            <svg key={i} viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
+              <circle
+                cx="50"
+                cy="50"
+                r={r}
+                fill="none"
+                stroke="#A259FF"
+                strokeWidth="0.5"
+                strokeDasharray="2 3"
+                strokeOpacity="0.2"
+              />
+            </svg>
+          ))}
+
+          {/* Animated Planets */}
+          {[20, 30].map((distance, index) => (
+            <motion.div
+              key={index}
+              className="absolute top-1/2 left-1/2"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 10 + index * 3, ease: "linear" }}
+              style={{ transformOrigin: "center" }}
+            >
+              <div
+                className="relative"
+                style={{
+                  transform: `translate(-50%, -${distance}px)`
+                }}
+              >
+                <div
+                  className={`w-2.5 h-2.5 rounded-full ${
+                    index % 2 === 0 ? "bg-[#B79CED]" : "bg-[#D1B3FF]"
+                  } drop-shadow-[0_0_6px_rgba(183,156,237,0.4)] opacity-80`}
+                />
+              </div>
+            </motion.div>
+          ))}
+
+        </div>
+      </div>
+
 
       <div className="z-10 max-w-3xl">
       <motion.h2

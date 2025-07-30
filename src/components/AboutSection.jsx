@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import profilePic from "../assets/ash.jpeg";
 import Particles from "react-tsparticles";
-// import { loadFull } from "tsparticles-engine";
 import { loadStarsPreset } from "tsparticles-preset-stars";
 
 const techSkills = [
@@ -27,6 +26,66 @@ const AboutSection = () => {
       id="about"
       className="relative py-24 px-6 text-white overflow-hidden bg-[#0D1117]"
     >
+        {/* Starfield background */}
+      <Particles
+        className="absolute top-0 left-0 w-full h-full z-0"
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          preset: "stars",
+          background: { color: "#0D1117" },
+          fullScreen: { enable: false }
+        }}
+      />
+
+        <div className="absolute top-0 left-40 transform -translate-x-1/2 w-64 h-64 z-0 hidden md:block pointer-events-none opacity-80">
+        <div className="relative w-full h-full">
+
+          {/* Glowing Sun */}
+          <div className="absolute top-1/2 left-1/2 w-5 h-5 rounded-full bg-yellow-300 shadow-[0_0_20px_6px_rgba(255,215,0,0.7)] transform -translate-x-1/2 -translate-y-1/2 z-10" />
+
+          {/* Orbits */}
+          {[30, 45].map((r, i) => (
+            <svg key={i} viewBox="0 0 200 200" className="absolute inset-0 w-full h-full">
+              <circle
+                cx="100"
+                cy="100"
+                r={r}
+                fill="none"
+                stroke="#A259FF"
+                strokeWidth="1"
+                strokeDasharray="2 4"
+                strokeOpacity="0.2"
+              />
+            </svg>
+          ))}
+
+          {/* Animated Planets on Each Orbit */}
+          {[30, 45].map((distance, index) => (
+            <motion.div
+              key={index}
+              className="absolute top-1/2 left-1/2"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 10 + index * 3, ease: "linear" }}
+              style={{ transformOrigin: "center" }}
+            >
+              <div
+                className="relative"
+                style={{
+                  transform: `translate(-50%, -${distance}px)`
+                }}
+              >
+                <div
+                  className={`w-3 h-3 rounded-full ${
+                    index % 2 === 0 ? "bg-[#B79CED]" : "bg-[#D1B3FF]"
+                  } drop-shadow-[0_0_8px_rgba(183,156,237,0.4)] opacity-80`}
+                />
+              </div>
+            </motion.div>
+          ))}
+
+        </div>
+      </div>
 
       <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* Left: Text + Skills */}
@@ -93,7 +152,7 @@ const AboutSection = () => {
 
         {/* Right: Profile Image */}
         <motion.div
-          className="md:w-1/3 relative group hover:scale-105 transition-transform duration-300"
+          className="md:w-1/3 relative group hover:scale-105 transition-transform duration-300 hidden md:block pointer-events-none"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}

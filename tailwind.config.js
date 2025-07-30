@@ -11,6 +11,10 @@ export default {
         nebula: "#B79CED",
         orbit: "#A259FF",
       },
+      animation: {
+        'spin-slow': 'spin 15s linear infinite',
+        'spin-slower': 'spin 30s linear infinite',
+      },
     },
   },
   plugins: [],

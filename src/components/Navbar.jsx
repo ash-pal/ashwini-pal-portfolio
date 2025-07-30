@@ -43,7 +43,7 @@ function Navbar() {
         {/* Social Icons */}
         <div className="flex space-x-4 text-white text-lg">
           <motion.a
-            href="https://github.com/yourusername"
+            href="https://github.com/ash-pal"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
@@ -53,7 +53,7 @@ function Navbar() {
             <FaGithub />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/ashwinipal"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
