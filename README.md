@@ -1,12 +1,26 @@
-# React + Vite
+# 🚀 Ashwini Pal — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my interactive and animated space-themed developer portfolio built with **React**, **Tailwind CSS**, and **Framer Motion**. This site showcases my skills, projects, experience, and contact information in a creative and immersive way.
 
-Currently, two official plugins are available:
+## 🌌 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ **Built with React + Tailwind CSS**
+- 🎨 **Dark/Light mode toggle** with theme persistence
+- 🌠 **Animated space elements** (orbiting planets, starfield, floating astronaut/satellite, meteor hover)
+- 🧑‍🚀 **Scroll-following rocket spaceship**
+- 💻 **Projects section** with glowing cards and orbit icons
+- 🛰️ **About section** with floating SVG and timeline animation
+- 🌕 **Contact form** styled like a space transmission panel
+- 🌠 **Shooting stars in footer**
+- 📱 **Fully responsive** across devices
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Portfolio Preview](./assets/preview.png) <!-- You can add your screenshot path here -->
+
+## 🚀 Tech Stack
+
+- **Frontend:** React, Tailwind CSS
+- **Animation:** Framer Motion, CSS keyframes
+- **Icons & SVG:** Lucide, Heroicons, Custom SVGs
+
