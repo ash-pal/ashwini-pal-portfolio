@@ -24,3 +24,7 @@ Welcome to my interactive and animated space-themed developer portfolio built wi
 - **Animation:** Framer Motion, CSS keyframes
 - **Icons & SVG:** Lucide, Heroicons, Custom SVGs
 
+## 📬 Contact
+
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/ashwinipal) or [Email](mailto:palashwini2@gmail.com).
+
