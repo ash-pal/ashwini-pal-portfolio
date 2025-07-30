@@ -9,6 +9,7 @@ import { useThemeStore } from "./store/themeStore";
 import HoverMeteor from "./components/HoverMeteor";
 import Experience from "./components/Experience";
 import ScrollSpaceship from "./components/ScrollSpaceship";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   const { isSpace } = useThemeStore();
@@ -22,6 +23,7 @@ function App() {
         <AboutSection />
         <Experience />
         <ProjectsSection />
+        <SpeedInsights/>
         <Footer />
       </main>
     </div>
