@@ -14,7 +14,7 @@ Welcome to my interactive and animated space-themed developer portfolio built wi
 
 ## 📸 Preview
 
-![Portfolio Preview](./assets/preview.png) <!-- You can add your screenshot path here -->
+![Portfolio Preview](./src/assets/preview.png)
 
 ## 🚀 Tech Stack
 
