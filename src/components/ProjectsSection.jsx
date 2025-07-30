@@ -9,7 +9,7 @@ const projects = [
     description: "A full-stack trading dashboard enabling real-time stock monitoring, portfolio management, and transaction simulations.",
     github: "https://github.com/ashwini-pal/stock-trading-platform",
     live: "https://your-live-site.com",
-    disabled: false
+    disabled: true
   },
   {
     title: "AI Expense Tracker",

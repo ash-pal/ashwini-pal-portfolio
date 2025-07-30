@@ -8,12 +8,13 @@ const techSkills = [
   { name: "Java", level: 9 },
   { name: "Spring Boot", level: 8 },
   { name: "React.js", level: 8 },
-  { name: "Angular", level: 7 },
+  { name: "Angular", level: 6 },
   { name: "MySQL", level: 8 },
-  { name: "Hibernate", level: 7 },
+  { name: "Oracle", level: 8 },
   { name: "Git", level: 9 },
-  { name: "ColdFusion", level: 5 },
-  { name: "Generative AI", level: 6 },
+  { name: "CI/CD Tools", level: 7 },
+  { name: "Python", level: 5 },
+  { name: "LLM", level: 5 },
 ];
 
 const AboutSection = () => {
@@ -118,7 +119,7 @@ const AboutSection = () => {
           <div className="flex flex-wrap gap-4 mt-4">
             {techSkills.map((tech, idx) => (
               <div key={idx} className="group relative">
-                <span className="bg-[#1E1E2F] text-gray-300 px-7 py-1 rounded-full text-sm hover:bg-[#B79CED]/90 hover:text-black transition cursor-default">
+                <span className="bg-[#1E1E2F] text-gray-300 px-9 py-1 rounded-full text-sm hover:bg-[#B79CED]/90 hover:text-black transition cursor-default">
                   {tech.name}
                 </span>
                 {/* Starfield bar on hover */}
