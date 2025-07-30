@@ -5,12 +5,10 @@ Welcome to my interactive and animated space-themed developer portfolio built wi
 ## 🌌 Features
 
 - ⚛️ **Built with React + Tailwind CSS**
-- 🎨 **Dark/Light mode toggle** with theme persistence
-- 🌠 **Animated space elements** (orbiting planets, starfield, floating astronaut/satellite, meteor hover)
+- 🌠 **Animated space elements** (orbiting planets, starfield, meteor hover)
 - 🧑‍🚀 **Scroll-following rocket spaceship**
 - 💻 **Projects section** with glowing cards and orbit icons
 - 🛰️ **About section** with floating SVG and timeline animation
-- 🌕 **Contact form** styled like a space transmission panel
 - 🌠 **Shooting stars in footer**
 - 📱 **Fully responsive** across devices
 
